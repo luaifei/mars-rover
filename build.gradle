@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.thoughtworks'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+    testImplementation('org.mockito:mockito-all:1.10.19')
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
